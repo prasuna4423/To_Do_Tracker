@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>To do</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+<main class="container">
+  <h1 id="heading">To Do Tracker</h1>
+
+<div class="input-group mb-3">
+  <input type="text" class="form-control" id="inputTask" onkeydown="onEnterAdd(event)" placeholder="write task here" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-primary" type="button" onclick="addTask()">Add Task</button>
+  </div>
+</div>
+<div>
+  <ul id="taskList" class="list-group">
+  </ul>
+</div>
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Do you really want to delete the task?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="confirmDelete()">Remove</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="cancelDelete()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+
+<script src="script.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
